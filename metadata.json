@@ -1,0 +1,5 @@
+{
+  "name": "GGSIPU Academic Management Portal",
+  "description": "A robust, production-ready academic management portal for Guru Gobind Singh Indraprastha University. It features distinct dashboards for Coordinators, Teachers, and Students with comprehensive tools for class management, attendance, marks, and assignments, all persisting data in the browser.",
+  "requestFramePermissions": []
+}

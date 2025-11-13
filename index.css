@@ -1,0 +1,369 @@
+:root{
+  /* Official IPU branding colors */
+  --brand-900: #003366;     /* Dark Navy - Primary */
+  --brand-700: #004d99;     /* Professional Blue */
+  --brand-500: #0066cc;     /* Accent Blue */
+  --surface: #f5f5f5;       /* Light Gray Background */
+  --muted-beige: #e8e8e8;   /* Muted Gray */
+  --accent-gold: #ff9900;   /* Orange/Gold - CTA */
+  --accent-red: #cc3333;    /* Red - Important CTA */
+  --text-dark: #333333;     /* Dark Text */
+  --text-light: #666666;    /* Light Text */
+
+  /* Reduced overlay for hero to show background image better */
+  --overlay-color: rgba(0,51,102,0.12);
+
+  /* text defaults */
+  --body-text: var(--text-dark);
+  --muted-text: var(--text-light);
+}
+
+.hero-bg {
+  background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url('/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Ensure hero content is readable */
+.hero-bg .hero-content {
+  color: var(--surface);
+}
+
+/* subtle text shadow for headings */
+.hero-bg .drop-shadow {
+  text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Header tweaks */
+.site-header {
+  backdrop-filter: saturate(120%) blur(6px);
+  background: var(--brand-900);
+  border-bottom: 2px solid var(--accent-gold);
+  box-shadow: 0 2px 12px rgba(0, 51, 102, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Header heading styles */
+.site-header h1 {
+  color: #fcd34d !important;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  transition: transform 0.3s ease;
+}
+
+.site-header h1:hover {
+  transform: scale(1.02);
+}
+
+.site-header p {
+  color: #ffffff !important;
+}
+
+.site-header a {
+  color: #ffffff !important;
+}
+
+.site-header a:hover {
+  color: var(--accent-gold) !important;
+}
+
+/* Footer tweaks */
+.site-footer .logo {
+  max-height: 36px;
+}
+
+.site-footer { color: var(--surface); }
+.site-footer a { color: rgba(255,255,255,0.9); }
+.site-footer a:hover { color: #ffffff; }
+
+/* Theme utility classes used in components */
+.text-ggsipu-navy { color: var(--brand-900) !important; }
+.bg-ggsipu-navy { background-color: var(--brand-900) !important; }
+.text-ggsipu-700 { color: var(--brand-700) !important; }
+.text-ggsipu-500 { color: var(--brand-500) !important; }
+.bg-ggsipu-gold { background-color: var(--accent-gold) !important; }
+.text-ggsipu-gold { color: var(--accent-gold) !important; }
+
+/* Buttons */
+.btn-accent {
+  background: linear-gradient(135deg, var(--accent-red) 0%, #b32929 100%);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(204, 51, 51, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: left 0.4s ease;
+  z-index: 1;
+}
+
+.btn-accent:hover::before {
+  left: 100%;
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(204, 51, 51, 0.4);
+}
+
+.btn-accent:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(204, 51, 51, 0.3);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--brand-700) 0%, var(--brand-900) 100%);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 51, 102, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: left 0.4s ease;
+  z-index: 1;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 51, 102, 0.4);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 51, 102, 0.3);
+}
+
+/* Page defaults */
+body { 
+  background-color: var(--surface); 
+  color: var(--text-dark);
+}
+
+/* Light sections - dark text */
+.site-header, .site-header p { color: #ffffff; }
+
+/* Dark sections - light text */
+.site-footer { 
+  background-color: var(--brand-900);
+  color: #ffffff;
+}
+.site-footer a { 
+  color: var(--accent-gold);
+}
+.site-footer a:hover { 
+  color: #ffffff;
+  text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--brand-900);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+h1 {
+  font-size: 2.25rem;
+  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
+  color: var(--brand-900);
+}
+
+h2 {
+  font-size: 1.875rem;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.75rem;
+  border-bottom: 3px solid var(--accent-gold);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  color: var(--brand-900);
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: var(--brand-900);
+  transition: all 0.2s ease;
+}
+
+h3:hover {
+  color: var(--accent-gold);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+a {
+  color: var(--brand-700);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+a:hover {
+  color: var(--accent-gold);
+}
+
+/* Nav links special styling */
+nav a {
+  color: #ffffff !important;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--accent-gold) !important;
+  font-weight: 500;
+}
+
+nav a:active {
+  transform: scale(0.98);
+}
+
+/* Table styling fallback (for Contact page) */
+table { 
+  border-collapse: collapse;
+  color: var(--text-dark);
+}
+table thead th { 
+  background-color: var(--brand-900);
+  color: #ffffff;
+  font-weight: 600;
+}
+table tbody tr:nth-child(odd) { 
+  background-color: #ffffff;
+  color: var(--text-dark);
+}
+table tbody tr:nth-child(even) { 
+  background-color: #f5f5f5;
+  color: var(--text-dark);
+}
+table th, table td { 
+  border-bottom: 1px solid rgba(0, 51, 102, 0.1);
+}
+
+table a {
+  color: var(--accent-gold);
+}
+
+table a:hover {
+  color: var(--brand-900);
+}
+
+/* Form elements */
+input, textarea, select {
+  border: 1.5px solid var(--muted-beige);
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+  color: var(--text-dark);
+}
+
+input::placeholder, textarea::placeholder {
+  color: #999999;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--brand-500);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+  color: var(--text-dark);
+}
+
+input:hover, textarea:hover, select:hover {
+  border-color: var(--brand-700);
+}
+
+/* Generic button styling */
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+button:not(:disabled):active {
+  transform: translateY(0);
+}
+
+/* Tab buttons styling */
+button[role="tab"] {
+  padding: 0.75rem 1.25rem;
+  border-bottom: 2px solid transparent;
+  background-color: transparent;
+  color: var(--text-light);
+  transition: all 0.2s ease;
+  border-radius: 0;
+}
+
+button[role="tab"]:hover:not(:disabled) {
+  background-color: rgba(0, 102, 204, 0.05);
+  color: var(--brand-500);
+}
+
+button[role="tab"][aria-selected="true"] {
+  color: var(--accent-gold);
+  border-bottom-color: var(--accent-gold);
+  font-weight: 700;
+}
+
+/* Labels for forms */
+label {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* Text in cards and containers */
+p, span, div {
+  color: var(--text-dark);
+}
+
