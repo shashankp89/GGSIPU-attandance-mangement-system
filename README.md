@@ -1,8 +1,6 @@
-# 🎓 NUES GEMINI Academic Management Portal
+# 🎓 GGSIPU Attendance Portal
 
 A comprehensive web-based academic management system designed for Guru Gobind Singh Indraprastha University (GGSIPU). This portal streamlines academic operations by providing integrated platforms for Coordinators, Teachers, and Students.
-
-**Live Demo:** [https://shashankp89.github.io/GGSIPU-attandance-mangement-system/](https://shashankp89.github.io/GGSIPU-attandance-mangement-system/)
 
 ---
 
@@ -183,7 +181,7 @@ This deploys the application to GitHub Pages using the `gh-pages` branch.
 ## 📁 Project Structure
 
 ```
-GGSIPU-attandance-mangement-system/
+GGSIPU-Attendance-Portal/
 │
 ├── components/
 │   ├── Card.jsx              # Reusable card component
@@ -397,8 +395,9 @@ The project is configured for GitHub Pages deployment.
 3. **Update package.json**
    Add your repository URL:
    ```json
-   "homepage": "https://YOUR_USERNAME.github.io/GGSIPU-attandance-mangement-system"
+   "homepage": "https://YOUR_USERNAME.github.io/your-repo-name"
    ```
+   (Note: Replace YOUR_USERNAME with your GitHub username and your-repo-name with your repository name)
 
 4. **Build and Deploy**
    ```bash
@@ -409,6 +408,7 @@ The project is configured for GitHub Pages deployment.
 5. **Verify Deployment**
    - Go to your GitHub Pages URL
    - Application should be live within 2-3 minutes
+   - Note: Ensure all asset paths are correctly configured for your deployment environment
 
 ### **Deploy to Other Platforms**
 
@@ -565,7 +565,6 @@ For issues, questions, or suggestions:
 
 ## 🎯 Quick Links
 
-- 🌐 **Live Demo:** https://shashankp89.github.io/GGSIPU-attandance-mangement-system/
 - 📦 **GitHub Repository:** https://github.com/shashankp89/GGSIPU-attandance-mangement-system
 - 📚 **React Documentation:** https://react.dev
 - 🎨 **Tailwind CSS:** https://tailwindcss.com
